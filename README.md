@@ -98,10 +98,12 @@ These are all preceded by a "/" and they are used to match any one of a set of c
 /W:  The big W is the opposite of the small w.  It will match anything that isn't something that would be found in a word.  
 Character classes are also character sets inside of brackets.  
 [ae]allows for matching of either an a or e
+[^ae] negates characters so it won't match either a or e
 [a-e] aimilar to [a-z] would allow for matches in the range
 
 ### The OR Operator
 The OR operator is the straight line.  It is an alternation checks to make sure the expression before or after it matches. It doesn't always produce the desired results.  It is usually used with strings to give the or option.
+he(llo|lp) would match either help or hello
 |
 ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.(edu{3})$
 The email does not contain an OR operator
